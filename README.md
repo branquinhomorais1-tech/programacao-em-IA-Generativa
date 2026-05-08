@@ -165,3 +165,5 @@ Estudante de Programação em IA Generativa 🚀
 
 📅 Status
 📖 Curso em andamento.
+
+Daniel
