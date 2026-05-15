@@ -1,0 +1,48 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+# Dados
+sorvete = pd.DataFrame({
+    'temperatura': [18, 20, 24, 27, 30, 35],
+    'vendas': [20, 25, 40, 55, 70, 100]
+})
+
+# Variável independente (X)
+X = sorvete[['temperatura']]
+
+# Variável dependente (y)
+y = sorvete['vendas']
+
+# Criando o modelo
+modelo = LinearRegression()
+
+# Treinando o modelo
+modelo.fit(X, y)
+
+# Fazendo previsões
+previsoes = modelo.predict(X)
+
+# Mostrar equação da reta
+coeficiente = modelo.coef_[0]
+intercepto = modelo.intercept_
+
+print(f'Coeficiente angular: {coeficiente:.2f}')
+print(f'Intercepto: {intercepto:.2f}')
+
+# Previsão para 32 graus
+nova_temp = [[32]]
+previsao_32 = modelo.predict(nova_temp)
+
+print(f'Previsão de vendas para 32°C: {previsao_32[0]:.2f}')
+
+# Gráfico
+plt.scatter(X, y, label='Dados reais')
+plt.plot(X, previsoes, label='Linha de regressão')
+
+plt.xlabel('Temperatura')
+plt.ylabel('Vendas')
+plt.title('Temperatura x Vendas de Sorvete')
+plt.legend()
+
+plt.show()
