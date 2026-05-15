@@ -1,0 +1,196 @@
+# # # # import pandas as pd
+# # # # import matplotlib.pyplot as plt
+# # # # from sklearn.linear_model import LinearRegression
+
+# # # # # Dados
+# # # # estudos = pd.DataFrame({
+# # # #     'notas': [1, 2, 4, 6, 8, 10],
+# # # #     'horas': [2, 4, 5, 7, 9, 10]
+# # # # })
+
+# # # # # Variável independente (X)
+# # # # X = estudos[['horas']]
+
+# # # # # Variável dependente (y)
+# # # # y = estudos['notas']
+
+# # # # # Criando o modelo
+# # # # modelo = LinearRegression()
+
+# # # # # Treinando o modelo
+# # # # modelo.fit(X, y)
+
+# # # # # Fazendo previsões
+# # # # previsoes = modelo.predict(X)
+
+# # # # # Informações do modelo
+# # # # coeficiente = modelo.coef_[0]
+# # # # intercepto = modelo.intercept_
+
+# # # # print(f'Coeficiente angular: {coeficiente:.2f}')
+# # # # print(f'Intercepto: {intercepto:.2f}')
+
+# # # # # Previsão para 8 horas de estudo
+# # # # nova_hora = [[8]]
+# # # # previsao = modelo.predict(nova_hora)
+
+# # # # print(f'Nota prevista para 8 horas de estudo: {previsao[0]:.2f}')
+
+# # # # # Gráfico
+# # # # plt.scatter(X, y, label='Dados reais')
+# # # # plt.plot(X, previsoes, label='Linha de regressão')
+
+# # # # plt.xlabel('Horas de estudo')
+# # # # plt.ylabel('Notas')
+# # # # plt.title('Horas de Estudo x Notas')
+# # # # plt.legend()
+
+# # # # plt.show()
+
+
+# # # # -------------------
+
+# # # import pandas as pd
+# # # import matplotlib.pyplot as plt
+# # # from sklearn.linear_model import LinearRegression
+
+# # # # Dados
+# # # gamer = pd.DataFrame({
+# # #     'horas_jogo': [1, 2, 4, 6, 8, 10],
+# # #     'cansaco': [1, 2, 3, 5, 8, 10]
+# # # })
+
+# # # # Variável independente (X)
+# # # X = gamer[['horas_jogo']]
+
+# # # # Variável dependente (y)
+# # # y = gamer['cansaco']
+
+# # # # Criando o modelo
+# # # modelo = LinearRegression()
+
+# # # # Treinando o modelo
+# # # modelo.fit(X, y)
+
+# # # # Fazendo previsões
+# # # previsoes = modelo.predict(X)
+
+# # # # Informações da reta
+# # # coeficiente = modelo.coef_[0]
+# # # intercepto = modelo.intercept_
+
+# # # print(f'Coeficiente angular: {coeficiente:.2f}')
+# # # print(f'Intercepto: {intercepto:.2f}')
+
+# # # # Previsão para 7 horas jogando
+# # # nova_entrada = [[7]]
+# # # previsao = modelo.predict(nova_entrada)
+
+# # # print(f'Cansaço previsto para 7 horas jogando: {previsao[0]:.2f}')
+
+# # # # Gráfico
+# # # plt.scatter(X, y, label='Dados reais')
+# # # plt.plot(X, previsoes, label='Linha de regressão')
+
+# # # plt.xlabel('Horas de jogo')
+# # # plt.ylabel('Cansaço')
+# # # plt.title('Horas de Jogo x Cansaço')
+# # # plt.legend()
+
+# # # plt.show()
+
+# # #----------------------------------------------------------------
+
+# # import pandas as pd
+# # import matplotlib.pyplot as plt
+# # from sklearn.linear_model import LinearRegression
+
+# # # Dados
+# # sorvete = pd.DataFrame({
+# #     'temperatura': [18, 20, 24, 27, 30, 35],
+# #     'vendas': [20, 25, 40, 55, 70, 100]
+# # })
+
+# # # Variável independente (X)
+# # X = sorvete[['temperatura']]
+
+# # # Variável dependente (y)
+# # y = sorvete['vendas']
+
+# # # Criando o modelo
+# # modelo = LinearRegression()
+
+# # # Treinando o modelo
+# # modelo.fit(X, y)
+
+# # # Fazendo previsões
+# # previsoes = modelo.predict(X)
+
+# # # Mostrar equação da reta
+# # coeficiente = modelo.coef_[0]
+# # intercepto = modelo.intercept_
+
+# # print(f'Coeficiente angular: {coeficiente:.2f}')
+# # print(f'Intercepto: {intercepto:.2f}')
+
+# # # Previsão para 32 graus
+# # nova_temp = [[32]]
+# # previsao_32 = modelo.predict(nova_temp)
+
+# # print(f'Previsão de vendas para 32°C: {previsao_32[0]:.2f}')
+
+# # # Gráfico
+# # plt.scatter(X, y, label='Dados reais')
+# # plt.plot(X, previsoes, label='Linha de regressão')
+
+# # plt.xlabel('Temperatura')
+# # plt.ylabel('Vendas')
+# # plt.title('Temperatura x Vendas de Sorvete')
+# # plt.legend()
+
+# # plt.show()
+
+
+# #-----------------------------------------------------
+
+# import pandas as pd
+# # import matplotlib.pyplot as plt
+# from sklearn.linear_model import LogisticRegression
+
+# # Dados
+# alunos = pd.DataFrame({
+#     'faltas': [0, 1, 2, 5, 7, 10],
+#     'resultado': [1, 1, 1, 0, 0, 0]
+# })
+
+# # Variável independente (X)
+# X = alunos[['faltas']]
+
+# # Variável dependente (y)
+# y = alunos['resultado']
+
+# # Criando o modelo
+# modelo = LogisticRegression()
+
+# # Treinando o modelo
+# modelo.fit(X, y)
+
+# # Previsão
+# nova_falta = [[3]]
+
+# previsao = modelo.predict(nova_falta)
+# probabilidade = modelo.predict_proba(nova_falta)
+
+# print(f'Resultado previsto: {previsao[0]}')
+
+# print(f'Probabilidade de aprovação: {probabilidade[0][1]:.2f}')
+# print(f'Probabilidade de reprovação: {probabilidade[0][0]:.2f}')
+
+# # Gráfico
+# plt.scatter(X, y, label='Dados reais')
+
+# plt.xlabel('Faltas')
+# plt.ylabel('Resultado')
+# plt.title('Faltas x Aprovação')
+
+# plt.show()
