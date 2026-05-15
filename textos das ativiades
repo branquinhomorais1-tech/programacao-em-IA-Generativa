@@ -1,0 +1,204 @@
+# 1 IA das Notas Escolares
+
+## Objetivo
+
+# Prever nota baseada nas horas de estudo.
+
+## Dados
+
+estudos = pd.DataFrame({
+'notas':[1,2,4,6,8,10],
+'horas':[2,4,5,7,9,10]
+})
+
+
+## Modelo
+
+# * LinearRegression
+
+# ---------------------------------------------
+
+# 2 Detector de Sono Gamer
+
+## Objetivo
+
+# Prever nível de cansaço baseado em horas jogando.
+
+## Dados
+
+
+gamer = pd.DataFrame({
+'horas_jogo':[1,2,4,6,8,10],
+'cansaco':[1,2,3,5,8,10]
+})
+
+
+## Modelo
+
+# * LinearRegression
+
+# --------------------------------------------------------
+
+# # 3 IA do Sorvete
+
+# ## Objetivo
+
+# Prever quantidade de sorvetes vendidos pela temperatura.
+
+## Dados
+
+
+sorvete = pd.DataFrame({
+'temperatura':[18,20,24,27,30,35],
+'vendas':[20,25,40,55,70,100]
+})
+
+
+## Modelo
+
+# * LinearRegression
+
+# -----------------------------------------------:
+
+# 4 Detector de Aprovação Ninja
+
+## Objetivo
+
+Classificar:
+
+* aprovado
+* reprovado
+
+## Dados
+
+alunos = pd.DataFrame({
+'faltas':[0,1,2,5,7,10],
+'resultado':[1,1,1,0,0,0]
+})
+
+
+## Modelo
+
+# * LogisticRegression
+
+# ---------------------------------
+
+
+# 5 IA do Pet Feliz
+
+## Objetivo
+
+# Prever felicidade do cachorro.
+
+## Dados
+
+
+pets = pd.DataFrame({
+'passeios':[1,2,3,4,5],
+'felicidade':[2,4,5,8,10]
+})
+
+
+## Modelo
+
+# * LinearRegression
+
+# -------------------------------------------------------------------
+
+# 6 Detector de Filme Bom
+
+## Objetivo
+
+# Prever nota do filme usando duração.
+
+## Dados
+
+filmes = pd.DataFrame({
+'duracao':[80,90,100,110,120],
+'nota':[4,5,7,8,9]
+})
+
+
+## Modelo
+
+* LinearRegression
+
+
+# -----------------------------------------
+
+# 7 IA da Pizza
+
+## Objetivo
+
+# Prever preço da pizza pelo tamanho.
+
+## Dados
+
+pizza = pd.DataFrame({
+'tamanho':[20,25,30,35,40],
+'preco':[20,30,40,50,60]
+})
+
+
+## Modelo
+
+* LinearRegression
+
+# -----------------------------------------------
+
+# 8 Detector de Música Viral
+
+## Objetivo
+
+# Prever chance da música viralizar.
+
+## Dados
+
+usica = pd.DataFrame({
+'bpm':[80,90,100,120,140],
+'viral':[1,2,4,7,10]
+})
+
+
+## Modelo
+
+* LinearRegression
+
+
+#-----------------------------------------------
+
+
+# 9 IA da Energia do Café
+
+## Objetivo
+
+# Prever energia baseada em cafés tomados.
+
+## Dados
+
+
+cafe = pd.DataFrame({
+'xicaras':[1,2,3,4,5],
+'energia':[2,4,6,8,10]
+})
+
+
+## Modelo
+
+* LinearRegression
+
+# --------------------------------------------------
+
+
+# 10. Rede Neural dos Super-Heróis
+
+## Objetivo
+
+# Classificar herói forte ou fraco.
+
+## Dados
+
+herois = pd.DataFrame({
+'forca':[1,2,3,7,8,10],
+'heroi':[0,0,0,1,1,1]
+})
